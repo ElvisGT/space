@@ -1,10 +1,14 @@
-import {Header} from 'components/Header';
+import {Header} from '../components/Header';
 
 
-export const Layout = () => {
+const Layout = ({children}) => {
   return (
-    <div>
+    <>
         <Header />
-    </div>
+        {children}
+    </>
   )
 }
+
+
+export default Layout;
