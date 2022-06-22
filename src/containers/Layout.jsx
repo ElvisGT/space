@@ -1,11 +1,12 @@
 import {Header} from '../components/Header';
 
 
-const Layout = () => {
+const Layout = ({children}) => {
   return (
-    <div>
+    <>
         <Header />
-    </div>
+        {children}
+    </>
   )
 }
 
