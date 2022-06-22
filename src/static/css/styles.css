@@ -96,3 +96,21 @@ body {
 .menu-icon-link {
     margin-right: 1rem;
 }
+
+.Footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 25rem;
+    background-color: var(--principal);
+}
+
+.Footer-form-submit-default {
+    background-color: transparent;
+    border: .2rem solid var(--white);
+}
+
+.Footer-form-submit-success {
+    background-color: green;
+}
+
