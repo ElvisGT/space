@@ -1,4 +1,4 @@
-import {Layout} from 'containers/Layout.jsx';
+import Layout from './containers/Layout';
 
 function App() {
   return (

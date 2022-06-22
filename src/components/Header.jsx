@@ -2,8 +2,11 @@ import React from 'react'
 
 export const Header = () => {
   return (
-    <div>
-        <h2>Header</h2>
-    </div>
+    <nav>
+      <a href='#'>Inicio</a>
+      <a href='#'>Explorar</a>    
+      <a href='#'>Favoritos</a>    
+      <a href='#'>Acerca</a>    
+    </nav>
   )
 }
