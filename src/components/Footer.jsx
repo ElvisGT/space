@@ -1,6 +1,31 @@
 import React,{useState} from 'react';
 import emailjs from 'emailjs-com';
 
+const social_networks_list = [
+    {
+        id:1,
+        link:"https://www.facebook.com/elvis.giltorres/",
+        src_img:"https://i.ibb.co/N37fLYQ/icons8-facebook-50.png",
+        alt_img:"icono de facebook",
+
+    },
+    {
+        id:2,
+        link:"https://github.com/ElvisGT",
+        src_img:"https://i.ibb.co/Fbfdvz5/icons8-github-64.png",
+        alt_img:"icono de github",
+
+    },
+    {
+        id:3,
+        link:"https://www.linkedin.com/in/elvis-gil-torres-ab64a9225/",
+        src_img:"https://i.ibb.co/QXPPLpp/icons8-linkedin-64.png",
+        alt_img:"icono de linkedin",
+
+    },
+
+] 
+
 export const Footer = () => {
     let defaultClass = 'Footer-form-submit-default';
     const [submitClass,SetSubmitClass] = useState(defaultClass);
@@ -47,9 +72,11 @@ export const Footer = () => {
         <div className='Footer-rights_social_networks'>
             <p className='Footer-rights'>@ Todos los derechos reservados</p>
             <div className='Footer-social_networks'>
-                <a href="https://www.facebook.com/elvis.giltorres/" target={"_blank"} rel="noreferrer"><img className="social-network-img" src='https://i.ibb.co/N37fLYQ/icons8-facebook-50.png' alt='icono de facebook'/></a>
-                <a href="https://github.com/ElvisGT" target={"_blank"} rel="noreferrer"><img className="social-network-img" src='https://i.ibb.co/Fbfdvz5/icons8-github-64.png' alt='icono de github'/></a>
-                <a href="https://www.linkedin.com/in/elvis-gil-torres-ab64a9225/" target={"_blank"} rel="noreferrer"><img className="social-network-img" src='https://i.ibb.co/QXPPLpp/icons8-linkedin-64.png' alt='icono de linkedin'/></a>
+                {
+                    social_networks_list.map(item => (
+                        <a key={item.id} href={item.link} target={"_blank"} rel="noreferrer"><img className="social-network-img" src={item.src_img} alt={item.alt_img}/></a>
+                    ))
+                }
             </div>
         </div>
 
