@@ -26,31 +26,31 @@ export const Footer = () => {
 
   return (
     <div className='Footer'>
-        <p>Si deseas hacerme una consulta sobre programacion o deseas saludar
+        <p className='Footer-message'>Si deseas hacerme una consulta sobre programacion o deseas saludar
             no dudes en rellenar el siguiente formulario que respondere lo mas pronto posible. 
         </p>
         <form className='Footer-form' onSubmit={handleSubmit} >
-            <label htmlFor='name'>Nombre
-                <input type="text" id="name" required name = "name_ref"/>
+            <label htmlFor='name'>
+                <input className='Footer-form-input' type="text" id="name" required name = "name_ref" placeholder='Nombre'/>
             </label>
-            <label htmlFor='email'>Email
-                <input type='email' id="email" required name ="email_ref"/>
+            <label htmlFor='email'>
+                <input className='Footer-form-input' type='email' id="email" required name ="email_ref" placeholder='Email'/>
             </label>
-            <label htmlFor='text'>Mensaje
-                <textarea id="text" required name = "message_ref" />
+            <label htmlFor='text'>
+                <textarea className='Footer-form-text' id="text" required name = "message_ref" placeholder='Mensaje'/>
             </label>
             
             <label htmlFor='submit'>
                 <input type="submit" id="submit" value="Enviar" className={submitClass}/>
             </label>
         </form>
-        <div>
+        <div className='Footer-rights_social_networks'>
+            <p className='Footer-rights'>@ Todos los derechos reservados</p>
             <div className='Footer-social_networks'>
-                <a href="https://www.facebook.com/elvis.giltorres/"><img src='https://i.ibb.co/N37fLYQ/icons8-facebook-50.png' alt='icono de facebook'/></a>
-                <a href="https://github.com/ElvisGT"><img src='https://i.ibb.co/Fbfdvz5/icons8-github-64.png' alt='icono de github'/></a>
-                <a href="https://www.linkedin.com/in/elvis-gil-torres-ab64a9225/"><img src='https://i.ibb.co/QXPPLpp/icons8-linkedin-64.png' alt='icono de linkedin'/></a>
+                <a href="https://www.facebook.com/elvis.giltorres/" target={"_blank"} rel="noreferrer"><img className="social-network-img" src='https://i.ibb.co/N37fLYQ/icons8-facebook-50.png' alt='icono de facebook'/></a>
+                <a href="https://github.com/ElvisGT" target={"_blank"} rel="noreferrer"><img className="social-network-img" src='https://i.ibb.co/Fbfdvz5/icons8-github-64.png' alt='icono de github'/></a>
+                <a href="https://www.linkedin.com/in/elvis-gil-torres-ab64a9225/" target={"_blank"} rel="noreferrer"><img className="social-network-img" src='https://i.ibb.co/QXPPLpp/icons8-linkedin-64.png' alt='icono de linkedin'/></a>
             </div>
-            <p>@ Todos los derechos reservados</p>
         </div>
 
     </div>

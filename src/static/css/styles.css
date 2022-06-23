@@ -1,7 +1,9 @@
 :root {
     --principal:#0d1b2a;
     --background-dark:#333533;
-    --white:white
+    --white:white;
+    --success:green;
+    --secundario:#03a9f4;
 }
 
 * {
@@ -43,7 +45,7 @@ body {
     background-color: var(--principal);
     z-index: 2;
     opacity: 1;
-    box-shadow: -.1rem .1rem  1rem .1rem var(--white);
+    box-shadow: -.1rem .1rem  1rem .1rem var(--secundario);
 
     animation-name: menu;
     animation-timing-function: linear;
@@ -102,15 +104,86 @@ body {
     bottom: 0;
     width: 100%;
     min-height: 25rem;
+    padding-top: 1rem;
     background-color: var(--principal);
 }
 
+.Footer-message {
+    width: 90%;
+    margin: 0 auto 2rem; 
+    line-height: 2.2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.Footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 18rem;
+    margin-bottom: 2rem;
+}
+
+.Footer-form-input {
+    width: 20rem;
+    height: 3rem;
+    padding: 1rem;
+}
+
+
+.Footer-form-text{
+    width: 20rem;
+    height: 6rem;
+    padding: 1rem;
+    resize: none;
+    
+}
+
+.Footer-form-input:focus-visible, .Footer-form-text:focus-visible {
+    outline:.2rem solid var(--secundario);
+}
+::placeholder {
+    font-style: italic;
+}
+
+
 .Footer-form-submit-default {
-    background-color: transparent;
-    border: .2rem solid var(--white);
+    width: 6rem;
+    height: 2rem;
+    background-color: var(--white);
+    border: none;
+}
+
+.Footer-form-submit-default:active {
+    border: .3rem solid var(--secundario);
 }
 
 .Footer-form-submit-success {
-    background-color: green;
+    background-color: var(--success);
 }
 
+.Footer-rights_social_networks {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.Footer-social_networks{
+    display: flex;
+}
+
+.social-network-img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Footer-rights {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    text-align: center;
+    color:var(--white);
+}
