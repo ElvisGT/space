@@ -1,9 +1,10 @@
 :root {
-    --principal:#0d1b2a;
+    --principal:#012966;
     --background-dark:#333533;
     --white:white;
     --success:green;
-    --secundario:#03a9f4;
+    --secundario:#2196f3;
+    --fondo_leer:#faf9f9;
 }
 
 * {
@@ -18,6 +19,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    scroll-behavior: smooth;
 }
 
 .Header {
@@ -27,6 +29,8 @@ body {
     height: 8rem;
     background-color: var(--principal);
     z-index: 1;
+    box-shadow: 0rem .1rem 1rem .2rem var(--principal);
+
 }
 .Header-gretting {
     margin-left: 1rem;
@@ -45,7 +49,7 @@ body {
     background-color: var(--principal);
     z-index: 2;
     opacity: 1;
-    box-shadow: -.1rem .1rem  1rem .1rem var(--secundario);
+    box-shadow: -.1rem .1rem  .8rem .5rem var(--secundario);
 
     animation-name: menu;
     animation-timing-function: linear;
@@ -88,7 +92,7 @@ body {
     background-color: var(--background-dark);
     opacity: 0.8;
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -100,8 +104,6 @@ body {
 }
 
 .Footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     min-height: 25rem;
     padding-top: 1rem;
@@ -186,4 +188,57 @@ body {
     font-style: italic;
     text-align: center;
     color:var(--white);
+}
+
+.Home {
+    min-height: calc(100vh - 25rem - 8rem);
+}
+
+.Home-category {
+    font-size: 2.5rem;
+    margin: 2rem 2.5rem 1rem;
+}
+
+.Home-sections {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+}
+
+.sections-card{
+    min-width: 25rem;
+    margin: 1rem 1.3rem;
+    padding: 1.3rem;
+    scroll-snap-align: center;
+    background-color: var(--fondo_leer);
+    border: .2rem solid var(--secundario);
+    border-radius: 1.5rem;
+    box-shadow: .1rem .1rem 1rem .2rem var(--principal);
+}
+
+.sections-card-title {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.sections-card-description {
+    font-weight: 300;
+    line-height: 2.2rem;
+}
+
+.sections-card-release {
+    font-style: italic;
+}
+
+.sections-card-valoration {
+    color: var(--success);
+    font-weight: bold;
+}
+
+.sections-card > p {
+    margin: 1rem;
 }
