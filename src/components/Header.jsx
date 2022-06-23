@@ -60,7 +60,7 @@ export const Header = () => {
           <img src='https://i.ibb.co/Q8TW0J6/icons8-men-32.png' alt="icono de menu" className="Header-menu-icon" onClick={handleMenu}/>
         :
             <>
-              <span className='background-dark'></span>
+              <span className='background-dark' onClick={handleMenu}></span>
               <nav className='Header-menu'>
                 <img src="https://i.ibb.co/HCmN2MN/icons8-eliminar-50.png" alt="icono de cerrar" onClick={handleClose} className='Header-menu-close'/>
                   {
