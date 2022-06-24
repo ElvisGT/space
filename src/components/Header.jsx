@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { active } from "../Slices/menuSlice";
 import { useDispatch } from "react-redux";
@@ -43,10 +43,6 @@ export const Header = () => {
 		dispatch(active());
 	};
 
-	const handleClose = () => {
-		dispatch(active());
-	};
-
 	return (
 		<div className="Header">
 			<h1 className="Header-gretting">Mi Espacio</h1>
@@ -64,11 +60,16 @@ export const Header = () => {
 						<img
 							src="https://i.ibb.co/HCmN2MN/icons8-eliminar-50.png"
 							alt="icono de cerrar"
-							onClick={handleClose}
+							onClick={handleMenu}
 							className="Header-menu-close"
 						/>
 						{links_menu.map((item) => (
-							<Link key={item.id} to={item.path} className="Header-menu-link">
+							<Link
+								onClick={handleMenu}
+								key={item.id}
+								to={item.path}
+								className="Header-menu-link"
+							>
 								<img
 									className="menu-icon-link"
 									src={item.src_img}
