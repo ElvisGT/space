@@ -1,16 +1,12 @@
-import {Header} from '../components/Header';
-import {Footer} from '../components/Footer';
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
-
-const Layout = ({children}) => {
-  return (
-    <>
-        <Header />
-        {children}
-        <Footer />
-    </>
-  )
-}
-
-
-export default Layout;
+export const Layout = ({ children }) => {
+	return (
+		<>
+			<Header />
+			{children}
+			<Footer />
+		</>
+	);
+};

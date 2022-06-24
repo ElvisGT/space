@@ -1,8 +1,6 @@
-import ReactDOMClient from 'react-dom/client';
-import App from './App';
+import ReactDOMClient from "react-dom/client";
+import { AppRoutes } from "./routes/AppRoutes";
 
 const root = document.getElementById("root");
 const container = ReactDOMClient.createRoot(root);
-container.render(
-  <App />
-);
+container.render(<AppRoutes />);
