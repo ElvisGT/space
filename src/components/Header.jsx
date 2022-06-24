@@ -59,7 +59,7 @@ export const Header = () => {
 				/>
 			) : (
 				<>
-					<span className="background-dark" onClick={handleMenu}></span>
+					<div className="background-dark" onClick={handleMenu}></div>
 					<nav className="Header-menu">
 						<img
 							src="https://i.ibb.co/HCmN2MN/icons8-eliminar-50.png"
