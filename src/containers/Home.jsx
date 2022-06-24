@@ -1,5 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useFetch } from "../hooks/useFetch";
+import { add_favorite } from "../Slices/favoritesSlice";
 
 export const Home = () => {
 	const domain_img = "https://image.tmdb.org/t/p/w220_and_h330_face/";
@@ -12,6 +14,12 @@ export const Home = () => {
 	const API_upcoming = `https://api.themoviedb.org/3/movie/upcoming?page=1&api_key=f45c79601c26a15cfef52a1a31e4da6e&language=es-ES`;
 	const data_upcoming = useFetch(API_upcoming);
 
+	const dispatch = useDispatch();
+
+	const handleAdd = (card) => {
+		dispatch(add_favorite(card));
+	};
+
 	return (
 		<div className="Home">
 			<div className="Home-sections-container">
@@ -19,7 +27,11 @@ export const Home = () => {
 				<div className="Home-sections">
 					{data_popular !== undefined &&
 						data_popular.map((item) => (
-							<article key={item.id} className="sections-card">
+							<article
+								key={item.id}
+								className="sections-card"
+								onClick={() => handleAdd(item)}
+							>
 								<img
 									className="sections-card-img"
 									src={domain_img + item.poster_path}

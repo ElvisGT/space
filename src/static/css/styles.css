@@ -218,7 +218,29 @@ body {
     border: .2rem solid var(--secundario);
     border-radius: 1.5rem;
     box-shadow: .1rem .1rem 1rem .2rem var(--principal);
+    transition: 1s;
+    
 }
+
+.sections-card:hover {
+    animation-name: add_favorites;
+    animation-timing-function: ease-out;
+    animation-duration: .8s;
+    animation-fill-mode: both;
+}
+
+@keyframes add_favorites {
+    0% {
+        transform: scale(0.94);
+    }
+    100% {
+        transform: scale(1);
+    }
+  
+   
+}
+
+
 
 .sections-card-title {
     font-style: italic;

@@ -13,8 +13,8 @@ module.exports = {
 		"react-app",
 	],
 	rules: {
-		// "semi": ["error", "always"], //prettier-ignore
-		"prettier/prettier": 1,
+		"semi": ["error", "always"], //prettier-ignore
+		"prettier/prettier": 0,
 		"jsx-a11y/click-events-have-key-events": 0,
 		"jsx-a11y/no-noninteractive-element-interactions": 0,
 	},
