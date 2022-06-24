@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useFetch } from "../hooks/useFetch";
-import { add_favorite } from "../Slices/favoritesSlice";
+import { add_card } from "../Slices/favoritesSlice";
 
 export const Home = () => {
 	const domain_img = "https://image.tmdb.org/t/p/w220_and_h330_face/";
@@ -17,7 +17,7 @@ export const Home = () => {
 	const dispatch = useDispatch();
 
 	const handleAdd = (card) => {
-		dispatch(add_favorite(card));
+		dispatch(add_card(card));
 	};
 
 	return (

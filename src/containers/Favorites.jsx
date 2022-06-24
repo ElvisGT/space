@@ -1,13 +1,25 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { remove_card } from "../Slices/favoritesSlice";
 
 export const Favorites = () => {
 	const favorites = useSelector((state) => state.favorites.value);
 	const domain_img = "https://image.tmdb.org/t/p/w220_and_h330_face/";
+	const dispatch = useDispatch();
 
-	return favorites.length > 0 ? (
-		favorites.map((item) => (
-			<article key={item.id} className="sections-card">
+	const handleRemove = (card) => {
+		dispatch(remove_card(card));
+	};
+
+	const deleted_duplicates = [...new Set(favorites)]; //Esto es para eliminar duplicados
+
+	return deleted_duplicates.length > 0 ? (
+		deleted_duplicates.map((item) => (
+			<article
+				key={item.id}
+				className="sections-card"
+				onClick={() => handleRemove(item)}
+			>
 				<img
 					className="sections-card-img"
 					src={domain_img + item.poster_path}
