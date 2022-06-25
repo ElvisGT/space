@@ -1,8 +1,8 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch";
 import { Card } from "../components/Card";
-import { useDispatch } from "react-redux";
 import { add_card } from "../Slices/favoritesSlice";
+import { useDispatch } from "react-redux";
 
 export const Home = () => {
 	const API_Popular = `https://api.themoviedb.org/3/movie/popular?page=1&api_key=f45c79601c26a15cfef52a1a31e4da6e&language=es-ES`;
@@ -13,12 +13,14 @@ export const Home = () => {
 
 	const API_upcoming = `https://api.themoviedb.org/3/movie/upcoming?page=1&api_key=f45c79601c26a15cfef52a1a31e4da6e&language=es-ES`;
 	const data_upcoming = useFetch(API_upcoming);
-
+	
 	const dispatch = useDispatch();
 
 	const handleAdd = (card) => {
-		dispatch(add_card(card));
+	dispatch(add_card(card));
 	};
+
+
 	return (
 		<div className="Home">
 			<div className="Home-sections-container">
