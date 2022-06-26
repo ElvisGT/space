@@ -4,6 +4,7 @@ import { Card } from "../components/Card";
 import { useDispatch} from "react-redux";
 import { add_card } from "../Slices/favoritesSlice";
 import { setTrueNotification } from "../Slices/notificationSlice";
+import { useSelector } from 'react-redux';
 
 export const Home = () => {
 	const API_Popular = `https://api.themoviedb.org/3/movie/popular?page=1&api_key=f45c79601c26a15cfef52a1a31e4da6e&language=es-ES`;
@@ -16,9 +17,13 @@ export const Home = () => {
 	const data_upcoming = useFetch(API_upcoming);
 	
 	const dispatch = useDispatch();
+	const favorites = useSelector((state) => state.favorites.value);
+
 
 	const handleAdd = (card) => {
-		dispatch(add_card(card));
+		if (!favorites.includes(card)) {
+			dispatch(add_card(card));
+		}
 		dispatch(setTrueNotification());
 	};
 

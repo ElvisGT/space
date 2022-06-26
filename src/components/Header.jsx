@@ -36,7 +36,7 @@ export const Header = () => {
 			 	: 
 					<>
 						<div className="background-dark" onClick={handleMenu}></div>
-					<Menu event={ handleMenu } />
+						<Menu event={ handleMenu } />
 					</>
 			}
 		</div>

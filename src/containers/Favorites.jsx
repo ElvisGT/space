@@ -18,18 +18,16 @@ export const Favorites = () => {
 		};
 		
 	}, []);
-	
-	
-	 //Esto es para eliminar duplicados
-	const deleted_duplicates = [...new Set(favorites)];
-	
 
+	const clearDuplicates = [...new Set(favorites)]; //Esto es para eliminar duplicados
+	
+	
 	return (
 		<div className="Favorites">
-			<h1 className="Favorites-title">Mis Favoritos({ deleted_duplicates.length })</h1>
+			<h1 className="Favorites-title">Mis Favoritos({ clearDuplicates.length })</h1>
 			<div className="Favorites-section">
-				{deleted_duplicates.length > 0 ? (
-					deleted_duplicates.map((item) => (
+				{clearDuplicates.length > 0 ? (
+					clearDuplicates.map((item) => (
 						<Card {...item} key={item.id} event={() => handleRemove(item)} />
 					))
 				) : (

@@ -74,6 +74,7 @@ body {
     width: 4rem;
     height: 4rem;
     margin-right: 1rem;
+    z-index: 1;
 }
 
 .Header-menu-close {
@@ -110,8 +111,9 @@ body {
 }
 .notification-menu-closed {
     position: absolute;
-    right: 5rem;
+    right: 3.5rem;
     top: 1rem;
+    z-index: 2;
 }
 
 .background-dark {
