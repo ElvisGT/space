@@ -176,14 +176,14 @@ body {
 }
 
 
-.Footer-form-submit-default {
+.submit-default {
     width: 6rem;
     height: 2rem;
     background-color: var(--white);
     border: none;
 }
 
-.Footer-form-submit-default:active {
+.submit-default:active {
     border: .3rem solid var(--secundario);
 }
 
@@ -297,3 +297,20 @@ body {
     font-size: 2.5rem;
     font-weight: 500;
 }
+
+.Explore {
+    min-height: calc(100vh - 25rem - 6rem);
+}
+
+.Explore-title {
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 8rem 2rem 2rem;
+}
+
+.Explore-form-button {
+    background-color:var(--principal);
+    color: white;
+}
+
