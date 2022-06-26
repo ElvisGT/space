@@ -3,6 +3,8 @@ import { useFetch } from "../hooks/useFetch";
 import { Card } from '../components/Card';
 import { add_card } from "../Slices/favoritesSlice";
 import { useDispatch } from "react-redux";
+import { setTrueNotification } from "../Slices/notificationSlice";
+
 
 export const Explore = () => {
 	const [search, setsearch] = useState("a");
@@ -25,6 +27,7 @@ export const Explore = () => {
 
 	const handleAdd = (card) => {
 		dispatch(add_card(card));
+		dispatch(setTrueNotification());
 	};
 
 	const handleSearch = () => {
