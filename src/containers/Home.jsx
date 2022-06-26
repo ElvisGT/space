@@ -1,8 +1,10 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch";
 import { Card } from "../components/Card";
-import { useDispatch } from "react-redux";
+import { useDispatch} from "react-redux";
 import { add_card } from "../Slices/favoritesSlice";
+import { setTrueNotification } from "../Slices/notificationSlice";
+
 
 export const Home = () => {
 	const API_Popular = `https://api.themoviedb.org/3/movie/popular?page=1&api_key=f45c79601c26a15cfef52a1a31e4da6e&language=es-ES`;
@@ -18,6 +20,7 @@ export const Home = () => {
 
 	const handleAdd = (card) => {
 		dispatch(add_card(card));
+		dispatch(setTrueNotification());
 	};
 	return (
 		<div className="Home">
