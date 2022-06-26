@@ -5,6 +5,7 @@
     --success:green;
     --secundario:#2196f3;
     --fondo_leer:#faf9f9;
+    --alert:red;
 }
 
 * {
@@ -89,6 +90,28 @@ body {
     align-items: center;
     color: var(--white);
     text-decoration: none;
+}
+
+.Header-notification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color:var(--alert);
+    color: white;
+    border-radius: 50%;
+}
+
+.notification-menu-open {
+    position: absolute;
+    right: .8rem;
+    bottom:14.5rem;
+}
+.notification-menu-closed {
+    position: absolute;
+    right: 5rem;
+    top: 1rem;
 }
 
 .background-dark {
@@ -221,28 +244,13 @@ body {
     border: .2rem solid var(--secundario);
     border-radius: 1.5rem;
     box-shadow: .1rem .1rem 1rem .2rem var(--principal);
-    transition: 1s;
+    transition: .3s;
     
 }
 
-.sections-card:hover {
-    animation-name: add_favorites;
-    animation-timing-function: ease-out;
-    animation-duration: .8s;
-    animation-fill-mode: both;
+.sections-card:active {
+    background-color: var(--alert);
 }
-
-@keyframes add_favorites {
-    0% {
-        transform: scale(0.94);
-    }
-    100% {
-        transform: scale(1);
-    }
-  
-   
-}
-
 
 
 .sections-card-title {
@@ -305,3 +313,4 @@ body {
     background-color:var(--principal);
     color: white;
 }
+
