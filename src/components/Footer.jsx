@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { ButtonInput } from "./ButtonInput";
 
 const social_networks_list = [
 	{
@@ -23,8 +24,7 @@ const social_networks_list = [
 ];
 
 export const Footer = () => {
-	let defaultClass = "Footer-form-submit-default";
-	const [submitClass, SetSubmitClass] = useState(defaultClass);
+	const [submitClass, SetSubmitClass] = useState(null);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -40,7 +40,7 @@ export const Footer = () => {
 				if (response.status === 200) {
 					SetSubmitClass("Footer-form-submit-success");
 				}
-				setTimeout(() => SetSubmitClass(defaultClass), 3000);
+				setTimeout(() => SetSubmitClass(null), 3000);
 			});
 		e.target.reset();
 	};
@@ -84,12 +84,7 @@ export const Footer = () => {
 				</label>
 
 				<label htmlFor="submit">
-					<input
-						type="submit"
-						id="submit"
-						value="Enviar"
-						className={submitClass}
-					/>
+					<ButtonInput id="submit" />
 				</label>
 			</form>
 			<div className="Footer-rights_social_networks">
