@@ -317,3 +317,14 @@ body {
     color: white;
 }
 
+.Login {
+    min-height: calc(100vh - 25rem - 6rem);
+}
+
+.Login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+}
