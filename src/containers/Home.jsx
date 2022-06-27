@@ -4,6 +4,7 @@ import { Card } from "../components/Card";
 import { useDispatch, useSelector} from "react-redux";
 import { add_card } from "../Slices/favoritesSlice";
 import { setTrueNotification } from "../Slices/notificationSlice";
+import { HomeSections } from "../components/HomeSections";
 
 export const Home = () => {
 	const API_Popular = `https://api.themoviedb.org/3/movie/popular?page=1&api_key=f45c79601c26a15cfef52a1a31e4da6e&language=es-ES`;
@@ -30,35 +31,26 @@ export const Home = () => {
 
 	return (
 		<div className="Home">
-			<div className="Home-sections-container">
-				<h2 className="Home-category">Mas populares</h2>
-				<div className="Home-sections">
+				<HomeSections title={"Mas populares"}>
 					{data_popular !== undefined &&
 						data_popular.map((item) => (
 							<Card {...item} key={item.id} event={() => handleAdd(item)} />
 						))}
-				</div>
-			</div>
+				</HomeSections>
 
-			<div className="Home-sections-container">
-				<h2 className="Home-category">Mejor Valorados</h2>
-				<div className="Home-sections">
+				<HomeSections title={"Mejor valorados" }>
 					{data_top_rated !== undefined &&
 						data_top_rated.map((item) => (
 							<Card {...item} key={item.id} event={() => handleAdd(item)} />
 						))}
-				</div>
-			</div>
+				</HomeSections>
 
-			<div className="Home-sections-container">
-				<h2 className="Home-category">Proximos Estrenos</h2>
-				<div className="Home-sections">
+				<HomeSections title={"Proximos estrenos" }>
 					{data_upcoming !== undefined &&
 						data_upcoming.map((item) => (
 							< Card { ...item } key = { item.id } event = {() => handleAdd(item)} />
 						))}
-				</div>
-			</div>
+				</HomeSections>
 		</div>
 	);
 };
