@@ -1,6 +1,6 @@
 :root {
     --principal:#012966;
-    --background-dark:#333533;
+    --background-dark:#151615;
     --white:white;
     --success:green;
     --secundario:#2196f3;
@@ -37,7 +37,7 @@ body {
 
 }
 .Header-gretting {
-    margin-left: 1rem;
+    margin-left: 2rem;
     font-size: 2.3rem;
     color: var(--white);
 }
@@ -106,13 +106,14 @@ body {
 
 .notification-menu-open {
     position: absolute;
-    right: .8rem;
-    bottom:14.5rem;
+    right: .9rem;
+    bottom:14rem;
 }
 .notification-menu-closed {
     position: absolute;
     right: 3.5rem;
     top: 1rem;
+    box-shadow: .1rem .1rem .1rem .1rem var(--background-dark);
     z-index: 2;
 }
 
