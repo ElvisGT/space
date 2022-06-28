@@ -5,14 +5,14 @@ export const Login = () => {
     return (
         <div className='Login'>
             <form className='Login-form'>
-                <label htlmFor="name">
-                    <input type="text" id="name" placeholder='Nombre'/>
+                <label htlmFor="nameLogin">
+                    <input type="text" id="nameLogin" placeholder='Nombre'/>
                 </label>
-                 <label htlmFor="pass">
-                    <input type="password" id="pass" placeholder='Contrasenia'/>
+                 <label htlmFor="passLogin">
+                    <input type="password" id="passLogin" placeholder='Contrasenia'/>
                 </label>
-                <label htmlFor='submit'>
-                    <input id="submit" type="submit" value='Entrar'/>
+                <label htmlFor='submitLogin'>
+                    <input id="submitLogin" type="submit" value='Entrar'/>
                 </label>
             </form>
             <Link to='/create'>Crear nuevo usario</Link>
