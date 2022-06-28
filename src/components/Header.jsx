@@ -20,8 +20,6 @@ export const Header = () => {
 	return (
 		<div className="Header">
 			<h1 className="Header-gretting">Mi Espacio</h1>
-			<div className="Header-interaction">
-			<Link to="/login"><img className="Header-user" src="https://i.ibb.co/2M9V0wm/icons8-usuario-30.png" alt="user"/></Link>
 			{!menu
 				? 
 					<>
@@ -42,7 +40,6 @@ export const Header = () => {
 						<Menu event={ handleMenu } />
 					</>
 			}
-			</div>
 		</div>
 	);
 };
