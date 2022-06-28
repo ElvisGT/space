@@ -31,6 +31,23 @@ export const Home = () => {
 
 	return (
 		<div className="Home">
+			<div className="Home-introduction-container">
+				<div className="Home-introduction">
+					<h1 className="Home-introduction-title">Bienvenido al sitio <span className="Home-introduction-MiEspacio">Mi Espacio</span></h1>	
+					<p className="Home-introduction-description">
+						Aqui podras encontrar la pelicula que desees
+						y saber informacion sobre la fecha de lanzamiento, 
+						sinopsis, entre otras cosas.
+					</p>
+					<h2 className="Home-introduction-includes">Ademas: </h2>
+					<ul className="Home-introduction-list">
+						<li>Tiene la funcionalidad de agregar a favoritos con solo tocar
+							la pelicula.</li>
+						<li>Tiene un buscador en tiempo real en el que puedes encontrar la pelicula que busques</li>
+					</ul>
+					<h3 className="Home-introduction-important">Tienes que iniciar sesion para poder acceder a estas funcionalidades!!!</h3>
+				</div>
+			</div>
 				<HomeSections title={"Mas populares"}>
 					{data_popular !== undefined &&
 						data_popular.map((item) => (

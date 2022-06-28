@@ -231,16 +231,68 @@ body {
     min-height: calc(100vh - 25rem - 6rem);
 }
 
+.Home-introduction-container {
+    width: 90%;
+    height: auto;
+    margin: 10rem auto 0;
+    background-color: var(--fondo_leer);
+    border-radius: 1.5rem;
+    border: .2rem solid var(--secundario);
+    box-shadow: .1rem .1rem 1rem .2rem var(--principal);
+}
+
+.Home-introduction{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.Home-introduction-MiEspacio {
+    color: var(--principal);
+}
+
+.Home-introduction-title {
+    padding: 1.5rem 0;
+    font-size: 3rem;
+    text-align: center;
+}
+.Home-introduction-description{
+    margin-left: .2rem;
+    padding-bottom: 2rem;
+    line-height: 2.2rem;
+
+}
+
+.Home-introduction-includes{
+    font-size: 2.2rem;
+    font-style: italic;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Home-introduction-list {
+    list-style: circle;
+    list-style-position: inside;
+}
+
+.Home-introduction-list > li {
+    margin: 1rem .2rem;
+}
+
+.Home-introduction-important {
+    margin: 2rem .5rem;
+    line-height: 2.2rem;
+    color: var(--principal);
+}
+
 .Home-category {
     font-size: 2.5rem;
-    margin: 10rem 2.5rem 1rem;
+    margin: 3.5rem 2.5rem 1rem;
 }
 
 .Home-sections {
     display: flex;
     width: 100%;
     margin-bottom: 2rem;
-    padding: 1rem;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x proximity;
