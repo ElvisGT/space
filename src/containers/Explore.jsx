@@ -7,7 +7,11 @@ import { setTrueNotification } from "../Slices/notificationSlice";
 
 
 export const Explore = () => {
-	const [search, setsearch] = useState("a");
+	//Esto es para que cuando recargue la pagina salgan pelis diferentes con un mini algoritmo de aleatorizacion
+	const lettersList = ["a", "e", "i", "o", "u"];
+	const randomLetter = Math.floor(Math.random() * 5);
+	/////////////////////
+	const [search, setsearch] = useState(lettersList[randomLetter]);
 	const inputRef = useRef(null);
 	const API_Search = `https://api.themoviedb.org/3/search/movie?api_key=f45c79601c26a15cfef52a1a31e4da6e&language=es-ES&query=${search}&page=1`;
 	const data = useFetch(API_Search);
@@ -21,7 +25,7 @@ export const Explore = () => {
 	}
 	
 	if (search.length === 0) { //Si buscamos y borramos de pronto regresa al valor anterior
-		setsearch("a");
+		setsearch(lettersList[randomLetter]);
 	}
 	
 
