@@ -10,6 +10,7 @@ export const Card = ({
 }) => {
 	const domain_img = "https://image.tmdb.org/t/p/w220_and_h330_face/";
 
+
 	return (
 		<article className="sections-card" onClick={event}>
 			<img
@@ -17,13 +18,13 @@ export const Card = ({
 				src={domain_img + poster_path}
 				alt={original_title}
 			/>
-			<p className="sections-card-title">Titulo: {original_title}</p>
-			<p className="sections-card-description">Descripcion: {overview}</p>
+			<p className="sections-card-title"><span>Titulo</span>: {original_title}</p>
+			<p className="sections-card-description"><span>Descripcion</span>: {overview}</p>
 			<p>
-				Valoracion:{" "}
+				<span>Valoracion:{" "}</span>
 				<span className="sections-card-valoration">{vote_average}</span>
 			</p>
-			<p className="sections-card-release">Fecha de salida: {release_date}</p>
+			<p className="sections-card-release"><span>Fecha de salida</span>: {release_date}</p>
 		</article>
 	);
 };
