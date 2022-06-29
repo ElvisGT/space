@@ -42,10 +42,9 @@ export const Home = () => {
 					<h2 className="Home-introduction-includes">Ademas: </h2>
 					<ul className="Home-introduction-list">
 						<li>Tiene la funcionalidad de agregar a favoritos con solo tocar
-							la pelicula.</li>
-						<li>Tiene un buscador en tiempo real en el que puedes encontrar la pelicula que busques</li>
+							la pelicula. De igual forma para borrar de la lista de favoritos</li>
+						<li>Tiene un buscador en tiempo real en el que puedes encontrar la pelicula que desees</li>
 					</ul>
-					<h3 className="Home-introduction-important">Tienes que iniciar sesion para poder acceder a estas funcionalidades!!!</h3>
 				</div>
 			</div>
 				<HomeSections title={"Mas populares"}>
