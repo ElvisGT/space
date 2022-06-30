@@ -194,6 +194,7 @@ body {
 
 .Footer-form-submit-success {
     background-color: var(--success);
+    color: var(--fondo_leer);
 }
 
 .Footer-rights_social_networks {

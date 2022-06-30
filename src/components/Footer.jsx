@@ -24,7 +24,7 @@ const social_networks_list = [
 ];
 
 export const Footer = () => {
-	const [submitClass, SetSubmitClass] = useState(null);
+	const [submitClass, SetSubmitClass] = useState("submit-default");
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -40,7 +40,7 @@ export const Footer = () => {
 				if (response.status === 200) {
 					SetSubmitClass("Footer-form-submit-success");
 				}
-				setTimeout(() => SetSubmitClass(null), 3000);
+				setTimeout(() => SetSubmitClass("submit-default"), 3000);
 			});
 		e.target.reset();
 	};
@@ -84,7 +84,7 @@ export const Footer = () => {
 				</label>
 
 				<label htmlFor="submit">
-					<ButtonInput id="submit" />
+					<ButtonInput id="submit" submitClass={submitClass}/>
 				</label>
 			</form>
 			<div className="Footer-rights_social_networks">
