@@ -385,3 +385,48 @@ body {
 .Explore-form-searchBar:focus-visible {
     outline: .2rem solid var(--secundario);
 }
+
+.About {
+    min-height: calc(100vh - 25rem - 6rem);
+}
+
+.About-card {
+    width: 90%;
+    margin: 10rem auto 2rem;
+    padding: 1.5rem;
+    background-color: var(--fondo_leer);
+    border: .2rem solid var(--secundario);
+    border-radius: 1.5rem;
+    box-shadow: .1rem .1rem 1rem .2rem var(--principal);
+}
+
+.About-title {
+    margin: 2.5rem 0 1rem;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.About-description {
+    font-weight: 500;
+    line-height: 2.2rem;
+}
+
+.About-list {
+    list-style: circle;
+    list-style-position: inside;
+}
+
+.About-list li {
+    margin: 1rem 0;
+    line-height: 2.2rem;
+}
+
+.About-link {
+    font-style: italic;
+    text-decoration: underline;
+    color: var(--principal);
+}
+
+.About-link:active {
+    color: var(--alert);
+}
