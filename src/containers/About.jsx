@@ -19,9 +19,9 @@ export const About = () => {
 				</ul>
 				<h2 className="About-title">Agradecimientos</h2>
 				<ul className="About-list">
-					<li>Documentacion oficial de Redux ToolKit: <a href="@" target={"_blank"} rel="noreferrer" className="About-link">Enlace</a></li>
-					<li>Iconos gracias a <a href="@" target={"_blank"} rel="noreferrer" className="About-link">Icons8</a></li>
-					<li>Documentacion oficial de JavaScript: <a href="@" target={"_blank"} rel="noreferrer" className="About-link">Enlace</a></li>
+					<li>Documentacion oficial de Redux ToolKit: <a href="https://redux-toolkit.js.org/" target={"_blank"} rel="noreferrer" className="About-link">Enlace</a></li>
+					<li>Iconos gracias a <a href="https://iconos8.es/" target={"_blank"} rel="noreferrer" className="About-link">Icons8</a></li>
+					<li>Documentacion oficial de JavaScript: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target={"_blank"} rel="noreferrer" className="About-link">Enlace</a></li>
 				</ul>
 			</div>
 			

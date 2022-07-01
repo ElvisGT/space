@@ -53,7 +53,7 @@ export const Explore = () => {
 					</label>
 				</form>
 			</div>
-			<div>
+			<div className="Explore-showData">
 				{
 					cardFinded.map(item => (
 						<Card {...item} key={item.id} event={ () => handleAdd(item) } />
