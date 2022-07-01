@@ -35,19 +35,19 @@ export const Home = () => {
 				<div className="Home-introduction">
 					<h1 className="Home-introduction-title">Bienvenido al sitio <span className="Home-introduction-MiEspacio">Mi Espacio</span></h1>	
 					<p className="Home-introduction-description">
-						Aqui podras encontrar la pelicula que desees
-						y saber informacion sobre la fecha de lanzamiento, 
+						Aquí podrás encontrar la película que desees
+						y saber información sobre la fecha de lanzamiento, 
 						sinopsis, entre otras cosas.
 					</p>
-					<h2 className="Home-introduction-includes">Ademas: </h2>
+					<h2 className="Home-introduction-includes">Además: </h2>
 					<ul className="Home-introduction-list">
 						<li>Tiene la funcionalidad de agregar a favoritos con solo tocar
-							la pelicula. De igual forma para borrar de la lista de favoritos</li>
-						<li>Tiene un buscador en tiempo real en el que puedes encontrar la pelicula que desees</li>
+							la película. De igual forma para borrar de la lista de favoritos</li>
+						<li>Tiene un buscador en tiempo real en el que puedes encontrar la película que desees</li>
 					</ul>
 				</div>
 			</div>
-				<HomeSections title={"Mas populares"}>
+				<HomeSections title={"Más populares"}>
 					{data_popular !== undefined &&
 						data_popular.map((item) => (
 							<Card {...item} key={item.id} event={() => handleAdd(item)} />
@@ -61,7 +61,7 @@ export const Home = () => {
 						))}
 				</HomeSections>
 
-				<HomeSections title={"Proximos estrenos" }>
+				<HomeSections title={"Próximos estrenos" }>
 					{data_upcoming !== undefined &&
 						data_upcoming.map((item) => (
 							< Card { ...item } key = { item.id } event = {() => handleAdd(item)} />

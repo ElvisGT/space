@@ -48,8 +48,8 @@ export const Footer = () => {
 	return (
 		<div className="Footer">
 			<p className="Footer-message">
-				Si deseas hacerme una consulta sobre programacion o deseas saludar no
-				dudes en rellenar el siguiente formulario que respondere lo mas pronto
+				Si deseas hacerme una consulta sobre programación o deseas saludar no
+				dudes en rellenar el siguiente formulario que responderé lo mas pronto
 				posible.
 			</p>
 			<form className="Footer-form" onSubmit={handleSubmit}>

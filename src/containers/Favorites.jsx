@@ -32,7 +32,7 @@ export const Favorites = () => {
 						<Card {...item} key={item.id} event={() => handleRemove(item)} />
 					))
 				) : (
-					<h2 className="Favorites-empty">Sin articulos</h2>
+					<h2 className="Favorites-empty">Sin artículos</h2>
 				)}
 			</div>
 		</div>

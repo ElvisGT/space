@@ -18,10 +18,10 @@ export const Card = ({
 				src={domain_img + poster_path}
 				alt={original_title}
 			/>
-			<p className="sections-card-title"><span>Titulo</span>: {original_title}</p>
-			<p className="sections-card-description"><span>Descripcion</span>: {overview}</p>
+			<p className="sections-card-title"><span>Título</span>: {original_title}</p>
+			<p className="sections-card-description"><span>Descripción</span>: {overview}</p>
 			<p>
-				<span>Valoracion:{" "}</span>
+				<span>Valoración:{" "}</span>
 				<span className="sections-card-valoration">{vote_average}</span>
 			</p>
 			<p className="sections-card-release"><span>Fecha de salida</span>: {release_date}</p>
