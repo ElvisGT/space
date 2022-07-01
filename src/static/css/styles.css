@@ -5,7 +5,7 @@
     --success:green;
     --secundario:#2196f3;
     --fondo_leer:#faf9f9;
-    --alert:red;
+    --alert:#f44336;
 }
 
 * {
@@ -79,6 +79,8 @@ body {
     z-index: 1;
 }
 
+
+
 .Header-menu-close {
     position: absolute;
     right: 0;
@@ -88,11 +90,20 @@ body {
     margin: 1rem;
 }
 
+.Header-menu-icon:hover, .Header-menu-close:hover {
+    cursor: pointer;
+}
+
 .Header-menu-link {
     display: flex;
     align-items: center;
     color: var(--white);
     text-decoration: none;
+}
+
+.Header-menu-link:hover {
+    text-decoration: underline;
+    color: var(--secundario);
 }
 
 .Header-notification{
@@ -393,7 +404,7 @@ body {
 
 .About-card {
     width: 90%;
-    margin: 10rem auto 2rem;
+    margin: 10rem auto 5rem;
     padding: 1.5rem;
     background-color: var(--fondo_leer);
     border: .2rem solid var(--secundario);
@@ -430,4 +441,66 @@ body {
 
 .About-link:active {
     color: var(--alert);
+}
+
+@media screen and (min-width:768px){
+    .Home-sections {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        overflow:hidden;
+    }
+    .sections-card {
+        width: 25rem;
+        overflow: hidden;
+        transition: .5s;
+
+    }
+
+    .sections-card:hover {
+        cursor: pointer;
+        transform: translateY(-.5rem);
+        background-color: var(--alert);
+        color: var(--fondo_leer);
+    }
+
+    .sections-card:active {
+        transition: .5ms;
+        background-color: var(--success);
+    }
+
+    
+    .Explore-form-searchBar {
+        width: 45rem;
+    }
+
+    .Explore-showData {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Favorites-section {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .Footer-form-input {
+        width: 30rem;
+      
+    }
+
+    .Footer-form-text {
+        width: 30rem;
+        height: 8rem;
+    
+    }
+
+    .submit-default:hover {
+        transition: .5s;
+        background-color: var(--alert);
+        cursor: pointer;
+    }
+
 }
