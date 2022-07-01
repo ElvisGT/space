@@ -40,12 +40,12 @@ export const Explore = () => {
 
 	return (
 		<div className="Explore">
-			<h1 className="Explore-title">Buscador de peliculas</h1>
+			<h1 className="Explore-title">Buscador de películas</h1>
 			<div>
 				<form className="Explore-form">
 					<label htmlFor="search_bar">
 						<input id="search_bar"
-								placeholder="Teclee la pelicula que desee"
+								placeholder="Teclee la película que desee"
 								onChange={handleSearch}
 								ref={inputRef}
 								className="Explore-form-searchBar"
